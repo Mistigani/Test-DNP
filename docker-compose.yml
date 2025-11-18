@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: docker/nginx.docker
     volumes:
-    - ./:/var/www
+    - ./app:/var/www
     ports:
     - "8080:80"
     links:
@@ -17,4 +17,4 @@ services:
       context: ./
       dockerfile: docker/php-fpm.docker
     volumes:
-      - ./:/var/www
+      - ./app:/var/www
